@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D9573D17-8352-4610-B9F5-9E4AC0C55659}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PROYECTO_IT_HEFESTO</RootNamespace>
+    <AssemblyName>PROYECTO_IT_HEFESTO</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>packages\BCrypt.Net-Next.4.0.3\lib\net472\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\Auth.cs" />
+    <Compile Include="Clases\BootStrapper.cs" />
+    <Compile Include="Clases\ConexionAcces.cs" />
+    <Compile Include="Clases\ConexionSQLServer.cs" />
+    <Compile Include="Clases\Configuracion.cs" />
+    <Compile Include="Clases\DB.cs" />
+    <Compile Include="Clases\DBAccess.cs" />
+    <Compile Include="Clases\Entorno.cs" />
+    <Compile Include="Clases\Helpers.cs" />
+    <Compile Include="Clases\Session.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\Auth\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Auth\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Avales\FrmAvalesInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Avales\FrmAvalesInicio.Designer.cs">
+      <DependentUpon>FrmAvalesInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Avales\FrmAvalesRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Avales\FrmAvalesRegistro.Designer.cs">
+      <DependentUpon>FrmAvalesRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Clientes\FrmEditoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Clientes\FrmEditoCliente.Designer.cs">
+      <DependentUpon>FrmEditoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Clientes\FrmInicioClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Clientes\FrmInicioClientes.Designer.cs">
+      <DependentUpon>FrmInicioClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Clientes\FrmRegistroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Clientes\FrmRegistroCliente.Designer.cs">
+      <DependentUpon>FrmRegistroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Financiera\FrmFinanciera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Financiera\FrmFinanciera.Designer.cs">
+      <DependentUpon>FrmFinanciera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FrmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Requisitos\FrmRegistroDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Requisitos\FrmRegistroDocumento.Designer.cs">
+      <DependentUpon>FrmRegistroDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Requisitos\FrmRequisitosInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Requisitos\FrmRequisitosInicio.Designer.cs">
+      <DependentUpon>FrmRequisitosInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Requisitos\FrmVerRequisitos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Requisitos\FrmVerRequisitos.Designer.cs">
+      <DependentUpon>FrmVerRequisitos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Servidores\FrmServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Servidores\FrmServer.Designer.cs">
+      <DependentUpon>FrmServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Ususarios\FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Ususarios\FrmUsuarios.Designer.cs">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Ususarios\FrmUsuariosEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Ususarios\FrmUsuariosEditar.Designer.cs">
+      <DependentUpon>FrmUsuariosEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Ususarios\FrmUsuariosPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Ususarios\FrmUsuariosPanel.Designer.cs">
+      <DependentUpon>FrmUsuariosPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Zonas\FrmEditZona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Zonas\FrmEditZona.Designer.cs">
+      <DependentUpon>FrmEditZona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Zonas\FrmInicioZona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Zonas\FrmInicioZona.Designer.cs">
+      <DependentUpon>FrmInicioZona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Zonas\FrmRegistroZona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Zonas\FrmRegistroZona.Designer.cs">
+      <DependentUpon>FrmRegistroZona.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Vistas\Auth\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Avales\FrmAvalesInicio.resx">
+      <DependentUpon>FrmAvalesInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Avales\FrmAvalesRegistro.resx">
+      <DependentUpon>FrmAvalesRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Clientes\FrmEditoCliente.resx">
+      <DependentUpon>FrmEditoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Clientes\FrmInicioClientes.resx">
+      <DependentUpon>FrmInicioClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Clientes\FrmRegistroCliente.resx">
+      <DependentUpon>FrmRegistroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Financiera\FrmFinanciera.resx">
+      <DependentUpon>FrmFinanciera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Requisitos\FrmRegistroDocumento.resx">
+      <DependentUpon>FrmRegistroDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Requisitos\FrmRequisitosInicio.resx">
+      <DependentUpon>FrmRequisitosInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Requisitos\FrmVerRequisitos.resx">
+      <DependentUpon>FrmVerRequisitos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Servidores\FrmServer.resx">
+      <DependentUpon>FrmServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Ususarios\FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Ususarios\FrmUsuariosEditar.resx">
+      <DependentUpon>FrmUsuariosEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Ususarios\FrmUsuariosPanel.resx">
+      <DependentUpon>FrmUsuariosPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Zonas\FrmEditZona.resx">
+      <DependentUpon>FrmEditZona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Zonas\FrmInicioZona.resx">
+      <DependentUpon>FrmInicioZona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Zonas\FrmRegistroZona.resx">
+      <DependentUpon>FrmRegistroZona.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Iconos\delete %282%29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Iconos\edit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Iconos\eye.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Iconos\magnifying-glass.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
